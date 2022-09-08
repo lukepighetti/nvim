@@ -5,7 +5,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-fugitive'
 Plug 'joshdick/onedark.vim'
 Plug 'folke/which-key.nvim'
 Plug 'ThePrimeagen/harpoon'
