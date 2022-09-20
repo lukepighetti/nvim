@@ -8,10 +8,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'joshdick/onedark.vim'
 Plug 'folke/which-key.nvim'
 Plug 'ThePrimeagen/harpoon'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'rose-pine/neovim', {'as': 'rose-pine', 'branch': 'main' }
 
 call plug#end()
 
-colorscheme onedark
+colorscheme tokyonight-moon
 set relativenumber
 
 source ~/.config/nvim/coc-init.vim
@@ -37,11 +39,7 @@ endfunction
 nnoremap <leader>wk <cmd>WhichKey<cr>
 
 lua << EOF
-  require("which-key").setup {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  }
+  require("which-key").setup {}
 EOF
 
 " User defined
