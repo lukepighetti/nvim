@@ -22,11 +22,11 @@ lua << EOF
   require('toggleterm').setup {}
 EOF
 
+source ~/.config/nvim/coc-init.vim
+
 " Look and feel
 colorscheme tokyonight-moon
 set number relativenumber
-
-source ~/.config/nvim/coc-init.vim
 
 " Telescope commands
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
