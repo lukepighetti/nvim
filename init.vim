@@ -12,12 +12,14 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'rose-pine/neovim', {'as': 'rose-pine', 'branch': 'main' }
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'kdheepak/lazygit.nvim'
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
 call plug#end()
 
 lua << EOF
   require('gitsigns').setup {}
   require('which-key').setup {}
+  require('toggleterm').setup {}
 EOF
 
 " Look and feel
@@ -55,6 +57,9 @@ nnoremap <leader>gsb <cmd>Gitsigns stage_buffer<cr>
 
 " Lazygit
 nnoremap <leader>lg <cmd>LazyGit<cr>
+
+" Toggleterm
+nnoremap <leader>tt <cmd>ToggleTerm direction=float<cr>
 
 " User defined
 nnoremap <leader>ca <cmd>CocAction<cr>
