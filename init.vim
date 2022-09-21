@@ -53,7 +53,8 @@ Gitsigns toggle_current_line_blame
 Gitsigns toggle_linehl
 nnoremap <leader>glb <cmd>Gitsigns toggle_current_line_blame<cr>
 nnoremap <leader>gdiff <cmd>Gitsigns diffthis<cr>
-nnoremap <leader>gsb <cmd>Gitsigns stage_buffer<cr>
+nnoremap <leader>gsh <cmd>Gitsigns stage_hunk<cr>
+nnoremap <leader>grh <cmd>Gitsigns reset_hunk<cr>
 
 " Lazygit
 nnoremap <leader>lg <cmd>LazyGit<cr>
