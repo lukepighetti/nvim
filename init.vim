@@ -22,8 +22,7 @@ EOF
 
 " Look and feel
 colorscheme tokyonight-moon
-set number
-set relativenumber
+set number relativenumber
 
 source ~/.config/nvim/coc-init.vim
 
