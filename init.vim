@@ -10,10 +10,19 @@ Plug 'folke/which-key.nvim'
 Plug 'ThePrimeagen/harpoon'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'rose-pine/neovim', {'as': 'rose-pine', 'branch': 'main' }
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'kdheepak/lazygit.nvim'
 
 call plug#end()
 
+lua << EOF
+  require('gitsigns').setup {}
+  require('which-key').setup {}
+EOF
+
+" Look and feel
 colorscheme tokyonight-moon
+set number
 set relativenumber
 
 source ~/.config/nvim/coc-init.vim
@@ -38,9 +47,15 @@ endfunction
 " Vim Script
 nnoremap <leader>wk <cmd>WhichKey<cr>
 
-lua << EOF
-  require("which-key").setup {}
-EOF
+" Gitsigns
+Gitsigns toggle_current_line_blame
+Gitsigns toggle_linehl
+nnoremap <leader>glb <cmd>Gitsigns toggle_current_line_blame<cr>
+nnoremap <leader>gdiff <cmd>Gitsigns diffthis<cr>
+nnoremap <leader>gsb <cmd>Gitsigns stage_buffer<cr>
+
+" Lazygit
+nnoremap <leader>lg <cmd>LazyGit<cr>
 
 " User defined
 nnoremap <leader>ca <cmd>CocAction<cr>
